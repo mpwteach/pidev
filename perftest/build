@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "Exploring Raspberry Pi Chapter 5 Performance Test Code"
+echo "Building the Executables"
+gcc -O3 n-body.cpp -o n-body -lm
+
+echo "Building the Java Executable"
+javac nbody.java
+
+echo "Finished Building the Compiled Programs"
