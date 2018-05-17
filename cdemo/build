@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ $# -ne 0 ] ; then
+    rm helloworld
+    rm variables
+    rm sizeofvariables
+    rm ifstmnt
+    rm ifstmnt_err
+    exit 0
+fi
+
+gcc helloworld.c -o helloworld
+gcc variables.c -o variables
+gcc sizeofvariables.c -o sizeofvariables
+gcc ifstmnt.c -o ifstmnt
+gcc ifstmnt_err.c -o ifstmnt_err
