@@ -10,5 +10,5 @@
 
 int main()
 {
-  printf("Hello World! %d", func());
+  printf("Hello World! %d\n", func());
 }
