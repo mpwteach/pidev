@@ -4,7 +4,7 @@ PROGARR=(helloworld variables sizeofvariables ifstmnt ifstmnt_err wloop floop ba
 
 if [ $# -ne 0 ] ; then
     for PROG in "${PROGARR[@]}" ; do
-	rm $PROG
+	rm $PROG &>/dev/null
     done
     echo "cleaned up"
     exit 0
