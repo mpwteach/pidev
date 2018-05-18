@@ -1,16 +1,20 @@
 #!/bin/bash
 
+PROGARR=(helloworld variables sizeofvariables ifstmnt ifstmnt_err wloop floop badindent pointers)
+
 if [ $# -ne 0 ] ; then
-    rm helloworld
-    rm variables
-    rm sizeofvariables
-    rm ifstmnt
-    rm ifstmnt_err
+    for PROG in "${PROGARR[@]}" ; do
+	rm $PROG
+    done
+    echo "cleaned up"
     exit 0
 fi
 
-gcc helloworld.c -o helloworld
-gcc variables.c -o variables
-gcc sizeofvariables.c -o sizeofvariables
-gcc ifstmnt.c -o ifstmnt
-gcc ifstmnt_err.c -o ifstmnt_err
+for PROG in "${PROGARR[@]}" ; do
+    gcc $PROG.c -o $PROG
+    if [ $? -ne 0 ] ; then
+	echo "build error: "$PROG
+	exit $?
+    fi
+done
+echo "built all"
