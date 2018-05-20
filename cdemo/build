@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROGARR=(helloworld variables sizeofvariables ifstmnt ifstmnt_err wloop floop badindent pointers)
+PROGARR=(helloworld variables sizeofvariables ifstmnt ifstmnt_err wloop floop badindent pointers funcs)
 
 if [ $# -ne 0 ] ; then
     for PROG in "${PROGARR[@]}" ; do
