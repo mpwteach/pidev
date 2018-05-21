@@ -10,11 +10,21 @@ int main()
   
   printf("str1 : %s\n", str1);
 
+  // DO NOT DO THIS - attempt to modify a character in a strong constant
+  //   compiler will not complain though
+  //*(str1 + 3) = 'c';
+
+
   
-  // str2 is an array which holds a copy of the constant
-  char str2[6] = "hello2";
+  // str2 is an array which holds a copy of the string constant
+  char str2[7] = "hello2";
   
   printf("str2 : %s\n", str2);
+
+  char* str2p = str2;
+  *(str2p + 3) = 'c';  // OK to modify array
+  printf("str2 : %s\n", str2p);
+  
 
   
   // str3 is also an array which holds a copy of the constant
