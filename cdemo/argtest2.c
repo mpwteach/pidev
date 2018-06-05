@@ -35,5 +35,7 @@ int main(int argc, char* argv[])
   // OK - at this stage the user input is validated and we can proceed...
   
   printf("great you entered two ints: %d and %d sum=%d\n", arg1, arg2, arg1+arg2);
+  printf("  and the square of arg1 is %d\n", arg1*arg1);
+  printf("%d\n", arg2*arg2);
 }
 
